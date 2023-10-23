@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import argparse, os, ConfigParser
+import argparse, os, configparser
 import numpy as np
 from astropy.io import fits
 from trm import doppler
@@ -108,7 +108,7 @@ OBJECT = SS433
                   'already exists and will not be overwritten.')
             exit(1)
 
-        config = ConfigParser.RawConfigParser()
+        config = configparser.RawConfigParser()
         config.read(doppler.acfg(args.config))
 
         tver   = config.getint('main', 'version')
