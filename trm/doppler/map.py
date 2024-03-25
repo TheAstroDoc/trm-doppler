@@ -336,7 +336,7 @@ class Image:
                     ' match in size'
                 )
 
-        elif isinstance(scale, collections.Iterable):
+        elif isinstance(scale, collections.abc.Iterable):
             self.scale = np.array(scale)
             if len(self.scale) != len(self.wave):
                 raise DopplerError(
